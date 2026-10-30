@@ -1,0 +1,63 @@
+Weryfikacja materiałów: Seminarium 1
+Data aktualizacji kontroli: 30 października 2026 r.
+Kontrole pierwotnego skryptu i rozwiązań przeprowadzono 29 października.
+
+Środowisko
+Lean: 4.36.0-rc2 (b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a)
+Lake: 5.0.0-src+b35cb10
+Mathlib: 88126f75a3ddb644aad4808bd1381ee4e3242c62
+Typst: 0.15.1
+
+Sprawdzanie plików poleceniem lake env lean
+Seminarium01.lean: kod zakończenia 0, bez błędów i ostrzeżeń.
+Rozwiazania01.lean: kod zakończenia 0, bez błędów i ostrzeżeń.
+Cwiczenia01.lean: kod zakończenia 0, 12 zamierzonych ostrzeżeń o sorry.
+Redakcja plików .lean obejmowała komentarze. Kod deklaracji i dowodów
+pozostał identyczny z wersją wejściową, co sprawdzono po usunięciu komentarzy.
+
+Wprowadzenie01.lean: kod zakończenia 0, bez błędów i ostrzeżeń.
+Sprawdzono m.in. interpretację literałów, przekształcenie ℕ do ℝ,
+notację kwaternionów i elementy macierzy skalarnej (3 : Matrix ...).
+
+Kod prezentacji
+Sprawdzono 33 bloki kodu wyodrębnione ze źródła Typst.
+Fragment exact hP osadzono w odpowiadającej mu deklaracji twierdzenia.
+Definicje potrzebne przykładom udostępniono z głównego skryptu.
+Wynik: kod zakończenia 0, bez błędów, 3 zamierzone ostrzeżenia
+o sorry w treści ćwiczeń. Zapisów stanu Infoview nie traktowano jako kodu.
+
+Zależności aksjomatyczne
+Polecenie #print axioms sprawdzono dla wszystkich 9 nazwanych twierdzeń
+w Seminarium01.lean. Żaden wynik nie zależy od sorryAx.
+affine_monotone, weakPref_refl, weakPref_trans, weakPref_complete,
+budget_mono_income, budget_convex, quadratic_global_max,
+quadratic_nonneg_optimum: [propext, Classical.choice, Quot.sound].
+doubleNat_eq: [propext].
+
+Prezentacja
+Prezentacja_Seminarium01.typ kompiluje się do Prezentacja_Seminarium01.pdf
+bez błędów i ostrzeżeń. Dokument zawiera 46 slajdów w proporcji 16:9.
+Sprawdzono render wszystkich stron oraz położenie tekstu względem marginesów.
+Zapis funkcji indeksowanej u_A(x) skontrolowano również wizualnie.
+
+Literatura
+Terminologię formalizacji porównano z Theorem Proving in Lean 4,
+Mathematics in Lean oraz dokumentacją Lean i Mathlib. Definicje Monotone,
+StrictMono i Convex porównano także z lokalnym źródłem Mathlib.
+Kontekst mikroekonomiczny: Osborne i Rubinstein, Models in Microeconomic
+Theory, Expanded Second Edition, 2023, rozdziały 1 i 5.
+Pełna bibliografia i zakres wykorzystania źródeł: część 8 przewodnika.
+
+Zakres kontroli
+Korzystano z lokalnie dostępnych artefaktów kompilacji Mathlib.
+Nie wykonywano instalacji wszystkich zależności od zera.
+Dokumentacja internetowa może dotyczyć innej wersji niż przypięta w projekcie.
+Omówienia niezmienniczości preferencji, ograniczoności zbioru budżetowego,
+jednoznaczności maksimum i przypadku A < 0 nie rozszerzają zakresu
+twierdzeń formalnie udowodnionych w skrypcie.
+
+Wersje wejściowe siedmiu redagowanych plików zachowano w:
+archiwum/Materialy_przed_redakcja_2026-10-29.zip
+
+Wersja poprzedzająca przebudowę wstępu:
+archiwum/Materialy_przed_przebudowa_wstepu_2026-10-30.zip
